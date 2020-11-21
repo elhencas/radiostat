@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Cancione;
 use Illuminate\Http\Request;
 
-class cancionescontroller extends Controller
+class CancioneController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,6 +15,8 @@ class cancionescontroller extends Controller
     public function index()
     {
         //
+        $cancionesdatos=Cancione::all();
+        return view('canciones.show',$cancionesdatos);
     }
 
     /**
@@ -40,10 +43,10 @@ class cancionescontroller extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Cancione  $cancione
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Cancione $cancione)
     {
         //
     }
@@ -51,10 +54,10 @@ class cancionescontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  \App\Models\Cancione  $cancione
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Cancione $cancione)
     {
         //
     }
@@ -63,10 +66,10 @@ class cancionescontroller extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Cancione  $cancione
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Cancione $cancione)
     {
         //
     }
@@ -74,10 +77,10 @@ class cancionescontroller extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param  \App\Models\Cancione  $cancione
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Cancione $cancione)
     {
         //
     }

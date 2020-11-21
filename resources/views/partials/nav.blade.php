@@ -7,10 +7,22 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
         </li>
         <li class="nav-item active">
-            <a class="nav-link" href="#">Generos<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/categorias">Categorias<span class="sr-only"></span></a>
         </li>
-     </div>
+        <li class="nav-item active">
+            <a class="nav-link" href="/generos">Generos<span class="sr-only"></span></a>
+        </li>
+       <li class="nav-item active">
+            <a class="nav-link" href="/artistas">Artistas<span class="sr-only"></span></a>
+       </li>
+       <li class="nav-item active">
+        <a class="nav-link" href="/estadisticas">Estadisticas<span class="sr-only"></span></a>
+       </li>
+
+
+      </ul>
+    </div>
   </nav>

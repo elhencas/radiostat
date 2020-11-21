@@ -2,7 +2,11 @@
 
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\artistascontroller;
+use App\Http\Controllers\ArtistaController;
+use App\Http\Controllers\CancioneController;
+use App\Http\Controllers\CategoriaController;
+use App\Http\Controllers\EstadisticaController;
+use App\Http\Controllers\GeneroController;
 
 
 /*
@@ -20,7 +24,15 @@ Route::get('/', function () {
   return view('inicio',['titulo'=>'Inicio']);
 })->name('inicio');
 
-Route::get('/artistas',[artistascontroller::class,'index']);
+Route::get('/artistas',[ArtistaController::class,'index']);
+
+Route::get('/generos',[GeneroController::class,'index']);
+
+Route::get('/canciones',[CancioneController::class,'index']);
+
+Route::get('/categorias',[CategoriaController::class,'index']);
+
+Route::get('/estadisticas',[EstadisticaController::class,'index']);
 
 
 /*  Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
