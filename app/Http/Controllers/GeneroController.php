@@ -15,8 +15,9 @@ class GeneroController extends Controller
     public function index()
     {
         //
-         $generos=Genero::get();
-        return view('generos.show',$generos);
+         $generosdatos=Genero::get();
+      //  return ($generosdatos);
+        return view('generos.show',['genero'=>$generosdatos]);
     }
 
     /**
