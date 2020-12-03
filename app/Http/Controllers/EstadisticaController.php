@@ -16,7 +16,7 @@ class EstadisticaController extends Controller
     {
         //
         $estadisticadatos=Estadistica::all();
-        return view('estadisticas.show',$estadisticadatos);
+        return view('estadisticas.show',['estadistica'=>$estadisticadatos]);
     }
 
     /**

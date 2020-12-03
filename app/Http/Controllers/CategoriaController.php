@@ -16,7 +16,7 @@ class CategoriaController extends Controller
     {
         //
         $categoriasdatos=Categoria::all();
-        return view('categorias.show',$categoriasdatos);
+        return view('categorias.show',['categoria'=>$categoriasdatos]);
     }
 
     /**

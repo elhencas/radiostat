@@ -15,8 +15,8 @@ class CancioneController extends Controller
     public function index()
     {
         //
-        $cancionesdatos=Cancione::all();
-        return view('canciones.show',$cancionesdatos);
+        $cancionesdatos=Cancione::select('canciones.id')->join('canciones','canciones.id',);
+        return view('canciones.show',['canciones'=>$cancionesdatos]);
     }
 
     /**

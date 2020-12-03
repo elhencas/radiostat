@@ -14,11 +14,23 @@ class Radiostat extends Migration
     public function up()
     {
         //
+
+        Schema::create('canciones', function (Blueprint $table) {
+            $table->id();
+            $table->string('nombrecancion');
+            $table->biginteger('idartista');
+            $table->biginteger('idgenero');
+            $table->biginteger('idcategoria');
+            $table->timestamps();
+        });
+
         Schema::create('artistas', function (Blueprint $table) {
             $table->id();
             $table->string('nombreartista');
             $table->timestamps();
+            $table->foreign('id')->references('id')->on('canciones')->ondelete('cascade');
         });
+
 
          Schema::create('categorias', function (Blueprint $table) {
             $table->id();
@@ -32,18 +44,11 @@ class Radiostat extends Migration
             $table->timestamps();
         });
 
-        Schema::create('canciones', function (Blueprint $table) {
-            $table->id();
-            $table->string('nombrecancion');
-            $table->integer('idartista');
-            $table->integer('idgenero');
-            $table->integer('idcategoria');
-            $table->timestamps();
-        });
+
 
          Schema::create('estadisticas', function (Blueprint $table) {
             $table->id();
-            $table->integer('idcancion');
+            $table->biginteger('idcancion');
             $table->timestamp('fecha',0);
             $table->string('solicitadopor');
             $table->string('lugar');

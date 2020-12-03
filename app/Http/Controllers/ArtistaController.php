@@ -16,7 +16,7 @@ class ArtistaController extends Controller
     {
         //
         $artistadatos=Artista::all();
-        return view('artistas.show',$artistadatos);
+        return view('artistas.show',['artista'=>$artistadatos]);
     }
 
     /**
