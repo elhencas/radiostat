@@ -28,7 +28,7 @@ class Radiostat extends Migration
             $table->id();
             $table->string('nombreartista');
             $table->timestamps();
-            $table->foreign('id')->references('id')->on('canciones')->ondelete('cascade');
+            $table->foreign('id')->references('id')->on('canciones')->onDelete('cascade')->onUpdate('cascade');
         });
 
 
